@@ -665,3 +665,121 @@ input[type="checkbox"] {
 .disclaimer a:hover {
     color: #ccc;
 }
+/* Styling for the newsletter section */
+.newsletter {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 40px 20px;
+    text-align: center; /* Center-aligns text horizontally */
+    font-family: Arial, sans-serif;
+}
+
+.newsletter h2 {
+    font-size: 2.5rem; /* Larger font size */
+    text-transform: uppercase; /* Capitalized text */
+    margin-bottom: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    /* Center the header vertically within the newsletter section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px; /* Adjust as needed */
+}
+
+.newsletter-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    font-size: 0.9rem; /* Slightly smaller font */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input[type="email"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #fff;
+    border-radius: 0;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+input[type="email"]::placeholder {
+    color: #bbb;
+}
+
+select {
+    appearance: none; /* Remove default dropdown styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='white' d='M2 0L0 2h4zM0 3l2 2 2-2z'/></svg>") no-repeat right 10px center;
+    background-size: 10px 10px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #fff; /* White checkbox styling */
+    width: 18px;
+    height: 18px;
+}
+
+label[for="maroon5"] {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 12px;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.disclaimer {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-top: 20px;
+    color: #bbb;
+}
+
+.disclaimer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.disclaimer a:hover {
+    color: #ccc;
+}
