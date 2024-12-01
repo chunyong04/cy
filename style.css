@@ -1,43 +1,579 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    background-color: #ffffff;
+    overflow-x: hidden;
 }
 
-header {
-    background: #333;
-    color: white;
-    padding: 10px 20px;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-nav ul {
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background-color: #000000;
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    max-width: 150px; /* Adjusted size */
+    height: auto;
+}
+
+.nav-menu {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 25px;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+.nav-menu a {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: color 0.3s, transform 0.3s, letter-spacing 0.3s ease;
 }
 
-#hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    height: 100vh;
+.nav-menu a:hover {
+    color: #f4c10f;
+    transform: scale(1.05);
+    letter-spacing: 2px;
+}
+
+.nav-menu .active {
+    color: #f4c10f;
+    border-bottom: 3px solid #f4c10f;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjusted height */
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
+    overflow: hidden;
+    background:url('maroon-5-posing-sofa-chair-wyt6uodf978ftohx.jpg') no-repeat center center/cover;
+    background-size: cover;
 }
 
-.albums {
-    display: flex;
-    gap: 15px;
-}
-
-.album {
-    background: lightgray;
-    padding: 20px;
+.hero-overlay {
     text-align: center;
+    color: #ffffff;
+    z-index: 1;
+    padding: 20px;
+}
+
+.hero-overlay h1 {
+    font-size: 3.5rem; /* Adjusted font size */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 900;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-overlay p {
+    font-size: 1.3rem; /* Adjusted size */
+    margin-bottom: 30px;
+    font-weight: 300;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-button {
+    padding: 16px 32px;
+    background-color: #f4c10f;
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-button:hover {
+    background-color: #d1a20d;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Music Section */
+.music {
+    padding: 80px 0;
+    background-color: #fffdfd;
+    background-image: url('music-bg-pattern.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.music h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    position: relative;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.music h2::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 3px;
+    background-color: #f4c10f;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.music-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.music-card {
+    width: 320px;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.music-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.music-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-bottom: 2px solid #ffffff;
+}
+
+.music-card h3 {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 700;
+}
+
+.music-card p {
+    font-size: 1.1rem;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.music-card .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #f4c10f;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-transform: uppercase;
+}
+
+.music-card .btn:hover {
+    background-color: #d1a20d;
+    transform: translateY(-3px);
+}
+
+/* Tour Section */
+.tour {
+    padding: 80px 0;
+    background-color: #000000;
+    color: #fff;
+    background-image: url('tour-bg-pattern.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.tour h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 4px;
+    position: relative;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.tour h2::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 3px;
+    background-color: #f4c10f;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Shop Section */
+.shop {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.shop h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 4px;
+    position: relative;
+}
+
+.shop h2::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 3px;
+    background-color: #f4c10f;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Footer */
+.footer {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 60px 20px;
+}
+
+.footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer ul li a {
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #f4c10f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 2.8rem; /* Reduced size */
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero-overlay p {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .hero-button {
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+
+    .music-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .music-card {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 40px 20px;
+    }
+}
+
+
+.album-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px; 
+    max-width: 1600px; 
+    width: 100%; 
+    margin: 0 auto;
+
+}
+.album {
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 20px;
+    width: 345px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.album img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+}
+
+.album-info {
+    margin-top: 10px;
+    color: #fff;
+}
+
+.album-info h3 {
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 16px;
+}
+
+.album-info p {
+    font-size: 0.9em;
+    margin-top: 5px;
+    color: #ccc;
+    padding-top: 28px;
+    padding-bottom: 10px;
+}
+
+/* Tour Dates Section */
+.tour-dates {
+    padding: 80px 0; /* Matches other sections' spacing */
+    background-color: #ffffff; /* Light background for contrast */
+    background-image: url('tour-bg-pattern.jpg'); /* Optional pattern */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+.tour-dates h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+.tour-dates h2::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 3px;
+    background-color: #f4c10f;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.event {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    max-width: 1000px;
+    margin: 0 auto 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.event:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f4c10f;
+    width: 15%;
+    text-align: center;
+}
+
+.details {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.event-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.location {
+    font-size: 1rem;
+    margin-top: 5px;
+    color: #777;
+}
+
+.ticket-btn {
+    padding: 10px 20px;
+    background-color: #f4c10f;
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ticket-btn:hover {
+    background-color: #d1a20d;
+    transform: scale(1.05);
+}
+
+/* Responsive Styles for Tour Dates */
+@media (max-width: 768px) {
+    .event {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .date {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .details {
+        margin-left: 0;
+    }
+
+    .ticket-btn {
+        margin-top: 15px;
+    }
+}
+
+/* Shop Section */
+.shop {
+    padding: 40px 20px;
+}
+
+.shop h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: 300;
+    margin-bottom: 1px;
+}
+
+.product-card h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 1px 0;
+}
+
+.product-card .price {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.product-card button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+    background-color: #444;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
 }
