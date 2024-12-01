@@ -580,68 +580,47 @@ a {
 
 /* Styling for the newsletter section */
 .newsletter {
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
-    padding: 40px 20px;
-    text-align: center; /* Center-aligns text horizontally */
-    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    padding: 50px;
+    text-align: left;
 }
 
 .newsletter h2 {
-    font-size: 2.5rem; /* Larger font size */
-    text-transform: uppercase; /* Capitalized text */
-    margin-bottom: 30px;
-    font-weight: bold;
-    letter-spacing: 2px;
-
-    /* Center the header vertically within the newsletter section */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100px; /* Adjust as needed */
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 .newsletter-form {
-    max-width: 700px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 label {
-    font-size: 0.9rem; /* Slightly smaller font */
+    font-size: 1rem;
     font-weight: bold;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-input[type="email"],
-select {
+input[type="email"] {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #fff;
-    border-radius: 0;
     background-color: transparent;
     color: #fff;
     font-size: 1rem;
     margin-bottom: 10px;
-    outline: none;
 }
 
 input[type="email"]::placeholder {
     color: #bbb;
-}
-
-select {
-    appearance: none; /* Remove default dropdown styling */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='white' d='M2 0L0 2h4zM0 3l2 2 2-2z'/></svg>") no-repeat right 10px center;
-    background-size: 10px 10px;
 }
 
 .checkbox-group {
@@ -651,28 +630,18 @@ select {
 
 input[type="checkbox"] {
     margin-right: 10px;
-    accent-color: #fff; /* White checkbox styling */
-    width: 18px;
-    height: 18px;
-}
-
-label[for="maroon5"] {
-    font-size: 1rem;
-    font-weight: normal;
 }
 
 .submit-btn {
-    display: block;
-    width: 100%;
-    background-color: #000;
+    display: inline-block;
+    background-color: transparent;
     color: #fff;
-    padding: 12px;
+    padding: 10px 20px;
     border: 2px solid #fff;
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    text-align: center;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -696,4 +665,3 @@ label[for="maroon5"] {
 .disclaimer a:hover {
     color: #ccc;
 }
-
