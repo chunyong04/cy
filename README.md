@@ -57,6 +57,5 @@ Browser Compatibility Testing:
 2. Test on different screen sizes (desktop, tablet, mobile) to ensure responsiveness and usability.
 
 Credits:
-Content: The content for the news articles section was inspired by various open-source content.
 Media: The images used on the product cards were sourced from https://www.maroon5.com/.
 Acknowledgements: Inspiration for the design and functionality was drawn from various e-commerce platforms known for their simple, user-centric design.
