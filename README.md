@@ -26,6 +26,7 @@ Technologies Used
 1. HTML: Used to structure the website’s content.
 2. CSS: Applied for styling the website, ensuring responsiveness and visual appeal.
 3. JavaScript: Handles all dynamic actions such as filtering products, managing the cart, and smooth scroll functionality.
+4. Figma: Used for wireframing and designing the initial mockups of the website.
 
 Testing
 Manual Testing Scenarios:
