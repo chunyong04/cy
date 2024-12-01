@@ -1,785 +1,693 @@
 /* Global Styles */
 body {
-    margin: 0;
-    font-family: 'Poppins', Arial, sans-serif;
-    line-height: 1.6;
-    color: #000000;
-    background-color: #ffffff;
-    overflow-x: hidden;
+    margin: 0; /* Remove default margin */
+    font-family: 'Poppins', Arial, sans-serif; /* Set font family */
+    line-height: 1.6; /* Line height for readability */
+    color: #000000; /* Default text color */
+    background-color: #ffffff; /* Set background color */
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent */
 }
 
 .container {
-    width: 90%;
-    max-width: 1300px;
-    margin: 0 auto;
+    width: 90%; /* Set container width */
+    max-width: 1300px; /* Set max width */
+    margin: 0 auto; /* Center the container */
 }
 
 /* Header */
 .header {
-    background-color: #000000;
-    color: #fff;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
-    transition: background-color 0.3s ease;
+    background-color: #000000; /* Set background color */
+    color: #fff; /* Set text color */
+    padding: 15px 0; /* Add padding */
+    position: sticky; /* Make header sticky */
+    top: 0; /* Stick to top */
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4); /* Add shadow */
+    transition: background-color 0.3s ease; /* Smooth transition for background */
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Use flexbox for navbar */
+    justify-content: space-between; /* Space out navbar items */
+    align-items: center; /* Vertically center items */
 }
 
 .logo-img {
-    max-width: 150px; /* Adjusted size */
-    height: auto;
+    max-width: 150px; /* Limit logo size */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 25px;
+    list-style: none; /* Remove list styles */
+    display: flex; /* Display as flex items */
+    gap: 25px; /* Space between menu items */
 }
 
 .nav-menu a {
-    color: #fff;
-    font-weight: 600;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    transition: color 0.3s, transform 0.3s, letter-spacing 0.3s ease;
+    color: #fff; /* Set text color for links */
+    font-weight: 600; /* Set font weight */
+    font-size: 1.1rem; /* Set font size */
+    letter-spacing: 1px; /* Space out letters */
+    transition: color 0.3s, transform 0.3s, letter-spacing 0.3s ease; /* Smooth transitions */
 }
 
 .nav-menu a:hover {
-    color: #f4c10f;
-    transform: scale(1.05);
-    letter-spacing: 2px;
+    color: #f4c10f; /* Change color on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+    letter-spacing: 2px; /* Increase letter-spacing on hover */
 }
 
 .nav-menu .active {
-    color: #f4c10f;
-    border-bottom: 3px solid #f4c10f;
+    color: #f4c10f; /* Highlight active link */
+    border-bottom: 3px solid #f4c10f; /* Add bottom border for active state */
 }
 
 /* Hero Section */
 .hero {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Adjusted height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background:url('maroon-5-posing-sofa-chair-wyt6uodf978ftohx.jpg') no-repeat center center/cover;
-    background-size: cover;
+    position: relative; /* Allow overlay to sit above */
+    width: 100%; /* Full width */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    overflow: hidden; /* Prevent content overflow */
+    background:url('maroon-5-posing-sofa-chair-wyt6uodf978ftohx.jpg') no-repeat center center/cover; /* Background image */
+    background-size: cover; /* Cover the full area */
 }
 
 .hero-overlay {
-    text-align: center;
-    color: #ffffff;
-    z-index: 1;
-    padding: 20px;
+    text-align: center; /* Center text */
+    color: #ffffff; /* Set text color */
+    z-index: 1; /* Ensure overlay is above background */
+    padding: 20px; /* Add padding */
 }
 
 .hero-overlay h1 {
-    font-size: 3.5rem; /* Adjusted font size */
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 900;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    animation: fadeIn 1.5s ease-in-out;
+    font-size: 3.5rem; /* Large font size */
+    margin-bottom: 20px; /* Add bottom margin */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Add spacing between letters */
+    font-weight: 900; /* Make font bold */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add text shadow */
+    animation: fadeIn 1.5s ease-in-out; /* Fade in effect */
 }
 
 .hero-overlay p {
-    font-size: 1.3rem; /* Adjusted size */
-    margin-bottom: 30px;
-    font-weight: 300;
-    animation: fadeIn 2s ease-in-out;
+    font-size: 1.3rem; /* Adjust font size */
+    margin-bottom: 30px; /* Add bottom margin */
+    font-weight: 300; /* Lighter font weight */
+    animation: fadeIn 2s ease-in-out; /* Fade in effect */
 }
 
 .hero-button {
-    padding: 16px 32px;
-    background-color: #f4c10f;
-    color: #000;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    padding: 16px 32px; /* Add padding */
+    background-color: #f4c10f; /* Set background color */
+    color: #000; /* Set text color */
+    font-size: 1.1rem; /* Font size */
+    font-weight: 600; /* Font weight */
+    border: none; /* Remove border */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Add shadow */
 }
 
 .hero-button:hover {
-    background-color: #d1a20d;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    background-color: #d1a20d; /* Darker color on hover */
+    transform: translateY(-4px); /* Move button up */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Larger shadow on hover */
 }
 
 /* Music Section */
 .music {
-    padding: 80px 0;
-    background-color: #fffdfd;
-    background-image: url('music-bg-pattern.png');
-    background-repeat: no-repeat;
-    background-position: center;
+    padding: 80px 0; /* Add padding */
+    background-color: #fffdfd; /* Set background color */
+    background-image: url('music-bg-pattern.png'); /* Background pattern */
+    background-repeat: no-repeat; /* Prevent repeating pattern */
+    background-position: center; /* Center background */
 }
 
 .music h2 {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 2.5rem;
-    color: #000;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 3px;
-    position: relative;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    text-align: center; /* Center the heading */
+    margin-bottom: 50px; /* Add margin below */
+    font-size: 2.5rem; /* Set font size */
+    color: #000; /* Set text color */
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: 800; /* Set bold font weight */
+    letter-spacing: 3px; /* Add letter-spacing */
+    position: relative; /* For the pseudo element */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Text shadow */
 }
 
 .music h2::after {
-    content: "";
-    position: absolute;
-    width: 90px;
-    height: 3px;
-    background-color: #f4c10f;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
+    content: ""; /* Empty content for the line */
+    position: absolute; /* Position below heading */
+    width: 90px; /* Set width */
+    height: 3px; /* Set height */
+    background-color: #f4c10f; /* Line color */
+    bottom: -12px; /* Position line */
+    left: 50%; /* Center line */
+    transform: translateX(-50%); /* Center the line */
 }
 
 .music-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+    display: flex; /* Use flexbox for cards */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 30px; /* Space between cards */
+    justify-content: center; /* Center cards */
 }
 
 .music-card {
-    width: 320px;
-    border: 2px solid #ffffff;
-    border-radius: 15px;
-    overflow: hidden;
-    background-color: #fff;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 320px; /* Set card width */
+    border: 2px solid #ffffff; /* Add white border */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    background-color: #fff; /* Set background color */
+    text-align: center; /* Center text inside card */
+    transition: transform 0.3s, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Add box-shadow */
 }
 
 .music-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-8px); /* Move card up on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
 }
 
 .music-card img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    border-bottom: 2px solid #ffffff;
+    width: 100%; /* Full width image */
+    height: 230px; /* Fixed height */
+    object-fit: cover; /* Cover the space */
+    border-bottom: 2px solid #ffffff; /* Border between image and text */
 }
 
 .music-card h3 {
-    margin: 20px 0;
-    font-size: 1.5rem;
-    color: #000000;
-    font-weight: 700;
+    margin: 20px 0; /* Add margin */
+    font-size: 1.5rem; /* Set font size */
+    color: #000000; /* Text color */
+    font-weight: 700; /* Bold font */
 }
 
 .music-card p {
-    font-size: 1.1rem;
-    color: #000000;
-    margin-bottom: 20px;
+    font-size: 1.1rem; /* Set font size */
+    color: #000000; /* Text color */
+    margin-bottom: 20px; /* Add bottom margin */
 }
 
 .music-card .btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #f4c10f;
-    color: #000;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: background-color 0.3s, transform 0.3s;
-    text-transform: uppercase;
+    display: inline-block; /* Inline button */
+    padding: 12px 25px; /* Padding */
+    background-color: #f4c10f; /* Set background color */
+    color: #000; /* Set text color */
+    font-weight: bold; /* Bold font */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor */
+    border-radius: 6px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    text-transform: uppercase; /* Uppercase text */
 }
 
 .music-card .btn:hover {
-    background-color: #d1a20d;
-    transform: translateY(-3px);
+    background-color: #d1a20d; /* Darker color on hover */
+    transform: translateY(-3px); /* Move button up */
 }
 
 /* Tour Section */
 .tour {
-    padding: 80px 0;
-    background-color: #000000;
-    color: #fff;
-    background-image: url('tour-bg-pattern.jpg');
-    background-size: cover;
-    background-position: center;
+    padding: 80px 0; /* Add padding */
+    background-color: #000000; /* Dark background */
+    color: #fff; /* Text color */
+    background-image: url('tour-bg-pattern.jpg'); /* Background image */
+    background-size: cover; /* Cover the section */
+    background-position: center; /* Center the image */
 }
 
 .tour h2 {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 2.5rem;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 4px;
-    position: relative;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    text-align: center; /* Center heading */
+    margin-bottom: 50px; /* Add margin below */
+    font-size: 2.5rem; /* Font size */
+    color: #fff; /* Text color */
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: 800; /* Bold font */
+    letter-spacing: 4px; /* Add letter-spacing */
+    position: relative; /* Position the pseudo element */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Text shadow */
 }
 
 .tour h2::after {
-    content: "";
-    position: absolute;
-    width: 90px;
-    height: 3px;
-    background-color: #f4c10f;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
+    content: ""; /* Empty content for the line */
+    position: absolute; /* Position below heading */
+    width: 90px; /* Set width */
+    height: 3px; /* Set height */
+    background-color: #f4c10f; /* Line color */
+    bottom: -12px; /* Position line */
+    left: 50%; /* Center line */
+    transform: translateX(-50%); /* Center the line */
 }
-
 
 /* Shop Section */
 .shop {
-    padding: 80px 0;
-    background-color: #fff;
+    padding: 80px 0; /* Add padding */
+    background-color: #fff; /* Set background color */
 }
 
 .shop h2 {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 2.5rem;
-    color: #000000;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 4px;
-    position: relative;
+    text-align: center; /* Center the heading */
+    margin-bottom: 50px; /* Add bottom margin */
+    font-size: 2.5rem; /* Set font size */
+    color: #000000; /* Text color */
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: 800; /* Bold font */
+    letter-spacing: 4px; /* Letter-spacing */
+    position: relative; /* Position the pseudo element */
 }
 
 .shop h2::after {
-    content: "";
-    position: absolute;
-    width: 90px;
-    height: 3px;
-    background-color: #f4c10f;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
+    content: ""; /* Empty content for the line */
+    position: absolute; /* Position below heading */
+    width: 90px; /* Set width */
+    height: 3px; /* Set height */
+    background-color: #f4c10f; /* Line color */
+    bottom: -12px; /* Position line */
+    left: 50%; /* Center line */
+    transform: translateX(-50%); /* Center the line */
 }
 
 /* Footer */
 .footer {
-    background-color: #1c1c1c;
-    color: #fff;
-    padding: 60px 20px;
+    background-color: #1c1c1c; /* Set background color */
+    color: #fff; /* Text color */
+    padding: 60px 20px; /* Add padding */
 }
 
 .footer ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+    list-style: none; /* Remove list styles */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items */
+    gap: 40px; /* Add space between links */
 }
 
 .footer ul li a {
-    color: #fff;
-    font-weight: 600;
-    transition: color 0.3s ease;
+    color: #fff; /* Set text color */
+    font-weight: 600; /* Set font weight */
+    transition: color 0.3s ease; /* Smooth transition */
 }
 
 .footer ul li a:hover {
-    color: #f4c10f;
+    color: #f4c10f; /* Change color on hover */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column; /* Stack navbar items */
+        align-items: flex-start; /* Align items to the start */
     }
 
     .nav-menu {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: column; /* Stack nav menu items */
+        gap: 15px; /* Space between items */
     }
 
     .hero-overlay h1 {
-        font-size: 2.8rem; /* Reduced size */
+        font-size: 2.8rem; /* Reduce font size */
         margin: 0;
         padding: 0;
     }
 
     .hero-overlay p {
-        font-size: 1.1rem;
+        font-size: 1.1rem; /* Reduce font size */
         margin-bottom: 20px;
     }
 
     .hero-button {
-        padding: 14px 28px;
-        font-size: 1rem;
+        padding: 14px 28px; /* Adjust padding */
+        font-size: 1rem; /* Adjust font size */
     }
 
     .music-cards {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: column; /* Stack music cards */
+        gap: 20px; /* Space between cards */
     }
 
     .music-card {
-        width: 100%;
+        width: 100%; /* Full width for music cards */
     }
 
     .footer {
-        padding: 40px 20px;
+        padding: 40px 20px; /* Reduce padding */
     }
 }
 
-
+/* Album Section */
 .album-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 40px; 
-    max-width: 1600px; 
-    width: 100%; 
-    margin: 0 auto;
-
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 20px; /* Add gap between albums */
+    padding: 40px; /* Padding around container */
+    max-width: 1600px; /* Set max-width */
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center container */
 }
+
 .album {
-    background-color: #000000;
-    border-radius: 10px;
-    padding: 20px;
-    width: 345px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #000000; /* Dark background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Add padding */
+    width: 345px; /* Set width */
+    text-align: center; /* Center text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
 .album:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px); /* Move up on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
 .album img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-
+    width: 100%; /* Full width image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
 }
 
 .album-info {
-    margin-top: 10px;
-    color: #fff;
+    margin-top: 10px; /* Margin on top */
+    color: #fff; /* Text color */
 }
 
 .album-info h3 {
-    font-size: 32px;
-    font-weight: bold;
-    padding-bottom: 16px;
+    font-size: 32px; /* Font size for album title */
+    font-weight: bold; /* Bold font */
+    padding-bottom: 16px; /* Padding below title */
 }
 
 .album-info p {
-    font-size: 0.9em;
-    margin-top: 5px;
-    color: #ccc;
-    padding-top: 28px;
-    padding-bottom: 10px;
+    font-size: 0.9em; /* Smaller text size */
+    margin-top: 5px; /* Add margin on top */
+    color: #ccc; /* Lighter text color */
+    padding-top: 28px; /* Padding on top */
+    padding-bottom: 10px; /* Padding on bottom */
 }
 
+
+/* Tour Dates Section */
 /* Tour Dates Section */
 .tour-dates {
     padding: 80px 0; /* Matches other sections' spacing */
     background-color: #ffffff; /* Light background for contrast */
     background-image: url('tour-bg-pattern.jpg'); /* Optional pattern */
-    background-size: cover;
-    background-position: center;
-    color: #333;
+    background-size: cover; /* Ensure background image covers the section */
+    background-position: center; /* Center the background image */
+    color: #333; /* Set default text color */
 }
 
 .tour-dates h2 {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 2.5rem;
-    color: #000000;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 3px;
-    position: relative;
+    text-align: center; /* Center-align the heading */
+    margin-bottom: 50px; /* Add space below the heading */
+    font-size: 2.5rem; /* Set font size for the heading */
+    color: #000000; /* Set text color for the heading */
+    text-transform: uppercase; /* Make the heading text uppercase */
+    font-weight: 800; /* Bold font weight */
+    letter-spacing: 3px; /* Add letter spacing */
+    position: relative; /* Set position for the line below */
 }
 
 .tour-dates h2::after {
-    content: "";
-    position: absolute;
-    width: 90px;
-    height: 3px;
-    background-color: #f4c10f;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
+    content: ""; /* Empty content for the after pseudo-element */
+    position: absolute; /* Position the line below the heading */
+    width: 90px; /* Set the width of the line */
+    height: 3px; /* Set the height of the line */
+    background-color: #f4c10f; /* Yellow color for the line */
+    bottom: -12px; /* Position the line below the heading */
+    left: 50%; /* Center the line horizontally */
+    transform: translateX(-50%); /* Adjust for perfect centering */
 }
 
+/* Event Card Styles */
 .event {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    max-width: 1000px;
-    margin: 0 auto 20px;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    background-color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Vertically align items */
+    padding: 15px; /* Add padding around the event card */
+    max-width: 1000px; /* Set a max-width for the event card */
+    margin: 0 auto 20px; /* Center the card with margin below */
+    border: 2px solid #ddd; /* Light border around the event card */
+    border-radius: 10px; /* Rounded corners for the event card */
+    background-color: #fff; /* White background for the event card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .event:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
 }
 
+/* Event Date */
 .date {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #f4c10f;
-    width: 15%;
-    text-align: center;
+    font-size: 1.2rem; /* Set font size for the date */
+    font-weight: bold; /* Bold the date */
+    color: #f4c10f; /* Set yellow color for the date */
+    width: 15%; /* Set a fixed width for the date section */
+    text-align: center; /* Center the date text */
 }
 
+/* Event Details */
 .details {
-    flex-grow: 1;
-    margin-left: 20px;
+    flex-grow: 1; /* Make the details section flexible */
+    margin-left: 20px; /* Space between date and event details */
 }
 
+/* Event Name */
 .event-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 0;
-    color: #333;
+    font-size: 1.2rem; /* Set font size for the event name */
+    font-weight: bold; /* Bold the event name */
+    margin: 0; /* Remove margin */
+    color: #333; /* Dark color for the event name */
 }
 
+/* Event Location */
 .location {
-    font-size: 1rem;
-    margin-top: 5px;
-    color: #777;
+    font-size: 1rem; /* Set font size for the location */
+    margin-top: 5px; /* Space above the location */
+    color: #777; /* Lighter color for the location */
 }
 
+/* Ticket Button Styles */
 .ticket-btn {
-    padding: 10px 20px;
-    background-color: #f4c10f;
-    color: #000;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 10px 20px; /* Add padding inside the button */
+    background-color: #f4c10f; /* Yellow background for the button */
+    color: #000; /* Black text color */
+    font-size: 1rem; /* Set font size for the button */
+    font-weight: bold; /* Bold text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
 }
 
 .ticket-btn:hover {
-    background-color: #d1a20d;
-    transform: scale(1.05);
+    background-color: #d1a20d; /* Darker yellow when hovered */
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 /* Responsive Styles for Tour Dates */
 @media (max-width: 768px) {
     .event {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
+        flex-direction: column; /* Stack event details vertically on smaller screens */
+        text-align: center; /* Center text for mobile */
+        padding: 20px; /* Add more padding for mobile */
     }
 
     .date {
-        width: 100%;
-        margin-bottom: 10px;
+        width: 100%; /* Date takes up full width on smaller screens */
+        margin-bottom: 10px; /* Space below date */
     }
 
     .details {
-        margin-left: 0;
+        margin-left: 0; /* Remove left margin for mobile */
     }
 
     .ticket-btn {
-        margin-top: 15px;
+        margin-top: 15px; /* Add space above the button */
     }
 }
 
 /* Shop Section */
 .shop {
-    padding: 40px 20px;
+    padding: 40px 20px; /* Padding for the shop section */
 }
 
 .shop h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2rem;
+    text-align: center; /* Center-align the shop heading */
+    margin-bottom: 20px; /* Space below heading */
+    font-size: 2rem; /* Font size for heading */
 }
 
+/* Product Container (Grid) */
 .product-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    display: grid; /* Use grid layout for products */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Auto-fit grid items */
+    gap: 20px; /* Space between grid items */
 }
 
+/* Product Card */
 .product-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    background-color: #fff; /* White background for product cards */
+    border: 1px solid #ddd; /* Light border around cards */
+    border-radius: 10px; /* Rounded corners for cards */
+    text-align: center; /* Center text inside cards */
+    padding: 20px; /* Padding inside cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.3s; /* Smooth transition on hover */
 }
 
+/* Product Image */
 .product-card img {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: 300;
-    margin-bottom: 1px;
+    width: 100%; /* Make image fill the card */
+    height: auto; /* Maintain image aspect ratio */
+    max-height: 400px; /* Limit the height of the image */
+    object-fit: cover; /* Ensure image covers container */
+    margin-bottom: 1px; /* Space below image */
 }
 
+/* Product Name */
 .product-card h3 {
-    font-size: 1.1rem;
-    color: #333;
-    margin: 1px 0;
+    font-size: 1.1rem; /* Set font size for product name */
+    color: #333; /* Dark color for text */
+    margin: 1px 0; /* Space above and below product name */
 }
 
+/* Product Price */
 .product-card .price {
-    font-size: 1rem;
-    color: #555;
-    margin: 5px 0;
+    font-size: 1rem; /* Font size for price */
+    color: #555; /* Lighter color for the price */
+    margin: 5px 0; /* Margin above and below price */
 }
 
+/* Product Button */
 .product-card button {
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
+    padding: 10px 20px; /* Button padding */
+    background-color: #000; /* Black background for button */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size for button */
+    transition: background-color 0.3s; /* Smooth background transition */
 }
 
 .product-card button:hover {
-    background-color: #444;
+    background-color: #444; /* Darker background when hovered */
 }
 
+/* Product Card Hover Effect */
 .product-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
-/* Styling for the newsletter section */
-.newsletter {
-    background-color: #000;
-    color: #fff;
-    padding: 50px;
-    text-align: left;
-}
-
-.newsletter h2 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.newsletter-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    font-size: 1rem;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-}
-
-input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #fff;
-    background-color: transparent;
-    color: #fff;
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-input[type="email"]::placeholder {
-    color: #bbb;
-}
-
-.checkbox-group {
-    display: flex;
-    align-items: center;
-}
-
-input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-.submit-btn {
-    display: inline-block;
-    background-color: transparent;
-    color: #fff;
-    padding: 10px 20px;
-    border: 2px solid #fff;
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.submit-btn:hover {
-    background-color: #fff;
-    color: #000;
-}
-
-.disclaimer {
-    font-size: 0.8rem;
-    line-height: 1.5;
-    margin-top: 20px;
-    color: #bbb;
-}
-
-.disclaimer a {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.disclaimer a:hover {
-    color: #ccc;
-}
-/* Styling for the newsletter section */
+/* Newsletter Section */
 .newsletter {
     background-color: #000; /* Black background */
     color: #fff; /* White text */
-    padding: 40px 20px;
-    text-align: center; /* Center-aligns text horizontally */
-    font-family: Arial, sans-serif;
+    padding: 50px; /* Padding around the newsletter */
+    text-align: left; /* Left-align text */
 }
 
 .newsletter h2 {
-    font-size: 2.5rem; /* Larger font size */
-    text-transform: uppercase; /* Capitalized text */
-    margin-bottom: 30px;
-    font-weight: bold;
-    letter-spacing: 2px;
-
-    /* Center the header vertically within the newsletter section */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100px; /* Adjust as needed */
+    font-size: 2rem; /* Font size for heading */
+    text-transform: uppercase; /* Uppercase heading */
+    margin-bottom: 20px; /* Space below heading */
 }
 
+/* Newsletter Form */
 .newsletter-form {
-    max-width: 700px;
-    margin: 0 auto;
+    max-width: 600px; /* Max width for the form */
+    margin: 0 auto; /* Center the form */
 }
 
+/* Form Group */
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 20px; /* Space between form fields */
 }
 
+/* Label Styles */
 label {
-    font-size: 0.9rem; /* Slightly smaller font */
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 1rem; /* Font size for labels */
+    font-weight: bold; /* Bold labels */
+    display: block; /* Block display to position labels above fields */
+    margin-bottom: 5px; /* Margin below labels */
+    text-transform: uppercase; /* Uppercase label text */
 }
 
-input[type="email"],
-select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #fff;
-    border-radius: 0;
-    background-color: transparent;
-    color: #fff;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    outline: none;
+/* Email Input */
+input[type="email"] {
+    width: 100%; /* Full width for the input */
+    padding: 10px; /* Padding inside the input */
+    border: 1px solid #fff; /* White border */
+    background-color: transparent; /* Transparent background */
+    color: #fff; /* White text color */
+    font-size: 1rem; /* Font size for the input */
+    margin-bottom: 10px; /* Space below the input */
 }
 
+/* Placeholder Text for Email Input */
 input[type="email"]::placeholder {
-    color: #bbb;
+    color: #bbb; /* Light color for placeholder text */
 }
 
-select {
-    appearance: none; /* Remove default dropdown styling */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='white' d='M2 0L0 2h4zM0 3l2 2 2-2z'/></svg>") no-repeat right 10px center;
-    background-size: 10px 10px;
-}
-
+/* Checkbox Group */
 .checkbox-group {
-    display: flex;
-    align-items: center;
+    display: flex; /* Flexbox for aligning checkbox and label */
+    align-items: center; /* Vertically center-align checkbox and label */
 }
 
 input[type="checkbox"] {
-    margin-right: 10px;
-    accent-color: #fff; /* White checkbox styling */
-    width: 18px;
-    height: 18px;
+    margin-right: 10px; /* Space between checkbox and label */
+    accent-color: #fff; /* White checkbox */
+    width: 18px; /* Set width of the checkbox */
+    height: 18px; /* Set height of the checkbox */
 }
 
-label[for="maroon5"] {
-    font-size: 1rem;
-    font-weight: normal;
-}
-
+/* Submit Button */
 .submit-btn {
-    display: block;
-    width: 100%;
-    background-color: #000;
-    color: #fff;
-    padding: 12px;
-    border: 2px solid #fff;
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s, color 0.3s;
+    display: block; /* Block-level button */
+    width: 100%; /* Full width for the button */
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 12px; /* Padding inside button */
+    border: 2px solid #fff; /* White border */
+    text-transform: uppercase; /* Uppercase text */
+    font-size: 1rem; /* Font size for the button */
+    font-weight: bold; /* Bold button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center text inside button */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
 .submit-btn:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #fff; /* White background on hover */
+    color: #000; /* Black text on hover */
 }
 
+/* Disclaimer Section */
 .disclaimer {
-    font-size: 0.8rem;
-    line-height: 1.5;
-    margin-top: 20px;
-    color: #bbb;
+    font-size: 0.8rem; /* Smaller font for disclaimer */
+    line-height: 1.5; /* Line spacing */
+    margin-top: 20px; /* Space above disclaimer */
+    color: #bbb; /* Light color for disclaimer text */
 }
 
 .disclaimer a {
-    color: #fff;
-    text-decoration: underline;
+    color: #fff; /* White color for links */
+    text-decoration: underline; /* Underlined links */
 }
 
 .disclaimer a:hover {
-    color: #ccc;
+    color: #ccc; /* Lighter color for links on hover */
 }
