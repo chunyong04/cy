@@ -577,3 +577,91 @@ a {
 .product-card:hover {
     transform: scale(1.05);
 }
+
+/* Styling for the newsletter section */
+.newsletter {
+    background-color: #000;
+    color: #fff;
+    padding: 50px;
+    text-align: left;
+}
+
+.newsletter h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+input[type="email"]::placeholder {
+    color: #bbb;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.submit-btn {
+    display: inline-block;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.disclaimer {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-top: 20px;
+    color: #bbb;
+}
+
+.disclaimer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.disclaimer a:hover {
+    color: #ccc;
+}
